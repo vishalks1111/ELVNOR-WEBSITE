@@ -1,0 +1,309 @@
+/* ELVNOR — coming-soon page */
+:root {
+  color-scheme: dark;
+  --ink: #f4f0e8;
+  --muted: #d2c8b9;
+  --accent: #d8c1a0;
+  --background: #11100e;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--background);
+}
+body {
+  color: var(--ink);
+  font-family: "Manrope", Arial, sans-serif;
+}
+.landing {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(
+      ellipse at 77% 45%,
+      rgba(55, 43, 30, 0.28),
+      transparent 43%
+    ),
+    #11100e;
+}
+.photo {
+  position: absolute;
+  z-index: -3;
+  inset: 0 auto 0 0;
+  width: 51%;
+  background-image: url("images/valdori-hero.jpg");
+  background-position: 43% center;
+  background-size: cover;
+  filter: saturate(0.72) contrast(1.05);
+}
+.shade {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: linear-gradient(
+      90deg,
+      rgba(10, 9, 8, 0.05) 0%,
+      rgba(10, 9, 8, 0.14) 28%,
+      #11100e 53%,
+      #11100e 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(8, 7, 6, 0.65) 0%,
+      transparent 26%,
+      transparent 76%,
+      rgba(8, 7, 6, 0.24) 100%
+    );
+}
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(22px, 3vw, 44px) clamp(24px, 4vw, 64px);
+}
+.wordmark {
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(23px, 2.2vw, 34px);
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  white-space: nowrap;
+}
+.categories {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.7vw, 25px);
+  color: #e8e1d7;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+}
+.categories i {
+  width: 1px;
+  height: 10px;
+  background: rgba(232, 225, 215, 0.45);
+}
+.message {
+  position: relative;
+  width: min(59%, 820px);
+  margin-left: auto;
+  padding: clamp(170px, 20vh, 235px) clamp(28px, 6vw, 100px) 150px 20px;
+  text-align: center;
+}
+.eyebrow {
+  margin: 0 0 32px;
+  color: #ddd4c7;
+  font-size: clamp(9px, 0.8vw, 12px);
+  font-weight: 400;
+  letter-spacing: 0.46em;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 7.2vw, 112px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  padding-left: 0.26em;
+}
+.rule {
+  width: 48px;
+  height: 1px;
+  background: var(--muted);
+  margin: 35px auto 29px;
+}
+h2 {
+  margin: 0;
+  color: var(--accent);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(24px, 3vw, 43px);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.description {
+  margin: 32px 0 0;
+  color: #d6d0c8;
+  font-size: clamp(11px, 0.92vw, 14px);
+  line-height: 2.15;
+  font-weight: 300;
+  letter-spacing: 0.19em;
+}
+.established {
+  position: absolute;
+  left: clamp(24px, 4vw, 64px);
+  bottom: 44px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #e2d9ce;
+  font-size: 9px;
+  letter-spacing: 0.27em;
+  text-transform: uppercase;
+}
+.established span {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #cfc2b0;
+}
+.footer {
+  position: absolute;
+  left: clamp(24px, 4vw, 64px);
+  right: clamp(24px, 4vw, 64px);
+  bottom: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.copyright {
+  margin: 0;
+  color: rgba(235, 229, 220, 0.78);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.socials a {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(235, 229, 220, 0.46);
+  border-radius: 50%;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.socials a:hover {
+  background: var(--ink);
+  color: #11100e;
+  border-color: var(--ink);
+}
+.social-placeholder {
+  opacity: 0.88;
+}
+@media (min-width: 1500px) {
+  .message {
+    padding-top: 23vh;
+  }
+}
+@media (max-width: 760px) {
+  .landing {
+    min-height: 100svh;
+  }
+  .photo {
+    width: 100%;
+    background-position: 38% center;
+  }
+  .shade {
+    background: linear-gradient(
+        180deg,
+        rgba(9, 8, 7, 0.2) 0%,
+        rgba(9, 8, 7, 0.22) 25%,
+        rgba(13, 12, 10, 0.76) 48%,
+        #11100e 82%
+      ),
+      linear-gradient(90deg, rgba(8, 7, 6, 0.2), rgba(8, 7, 6, 0.2));
+  }
+  .topbar {
+    padding: 23px 22px;
+    align-items: flex-start;
+  }
+  .wordmark {
+    font-size: 24px;
+    letter-spacing: 0.3em;
+  }
+  .categories {
+    gap: 9px;
+    font-size: 7px;
+    letter-spacing: 0.12em;
+    padding-top: 8px;
+  }
+  .categories i {
+    height: 8px;
+  }
+  .message {
+    width: 100%;
+    margin: 0;
+    padding: 42vh 22px 145px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.27em;
+    margin-bottom: 23px;
+  }
+  h1 {
+    font-size: clamp(46px, 13vw, 76px);
+    letter-spacing: 0.2em;
+    padding-left: 0.2em;
+  }
+  .rule {
+    margin: 24px auto 22px;
+  }
+  h2 {
+    font-size: clamp(21px, 6.3vw, 34px);
+    letter-spacing: 0.12em;
+  }
+  .description {
+    margin-top: 23px;
+    font-size: 10px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+  }
+  .established {
+    left: 22px;
+    bottom: 86px;
+    font-size: 8px;
+  }
+  .footer {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+    align-items: flex-end;
+  }
+  .copyright {
+    max-width: 150px;
+    font-size: 7px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+  }
+  .socials {
+    gap: 8px;
+  }
+  .socials a {
+    width: 25px;
+    height: 25px;
+    font-size: 8px;
+  }
+
+
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
